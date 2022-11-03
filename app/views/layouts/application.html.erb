@@ -11,6 +11,18 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <!--メイン-->
+    <main>
+
+      <!--フラッシュメッセージ-->
+      <% if flash[:notice] %>
+        <p class="flash"><%= flash[:notice] %></p>
+      <% end %>
+
+      <%= yield %>
+
+    </main>
+
   </body>
 </html>
